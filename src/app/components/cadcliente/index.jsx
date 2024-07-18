@@ -3,10 +3,20 @@
 import styles from './index.module.css';
 import Swal from 'sweetalert2';
 
-import React from "react";
+import React, { useRef } from "react";
+import { select } from '@nextui-org/react';
 
 
 export default function CadCliente() {
+
+    const selectSexo = useRef(null)
+
+    const handleselectSexo = () => {
+        const sexo = selectSexo.current.value;
+
+        console.log(sexo)
+    }
+
     const Pesquisar = () => {
         Swal.fire({
             width: 1200,
@@ -87,7 +97,7 @@ export default function CadCliente() {
 
                 <div className={`${styles.grid_item} ${styles.grid_sexo}`}>
                     <label for="sexo_cliente" className={styles.label_cliente}>Sexo:</label>
-                    <select id="sexo_cliente" name="sexo_cliente" required className={`${styles.select_cliente} ${styles.input_sexo}`}>
+                    <select ref={selectSexo} onClick={handleselectSexo} id="sexo_cliente" name="sexo_cliente" required className={`${styles.select_cliente} ${styles.input_sexo}`}>
                         <option value="" disabled selected>Selecionar</option>
                         <option value="0">Masculino</option>
                         <option value="1">Feminino</option>
