@@ -6,7 +6,7 @@ modais admins - cadastro de marcas categorias e modelos (individuais),
 
 landing page - refazer
 
-banco de dados - inserir validações, adicionar colunas na tabela veiculo (marcas_id, categorias_id), editar tabela veiculo  (marcas_id,         
+banco de dados - inserir validações, adicionar colunas na tabela veiculo (marcas_id, categorias_id), editar tabela veiculo marcas_id,          
 
 usuario - front basico, modais, filtros, conexão, validação, responsividade
 
