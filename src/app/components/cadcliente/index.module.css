@@ -1,5 +1,10 @@
 .title_page{
   padding-left: 20px;
+  color: #ff9d00;
+	border-bottom: 2px solid #ff9d00;
+	padding: 15px;
+	font-size: 22px;
+
 }
 
 .button_group {

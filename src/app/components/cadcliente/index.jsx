@@ -5,11 +5,12 @@ import Swal from 'sweetalert2';
 
 import React, { useRef } from "react";
 import { select } from '@nextui-org/react';
-
+import Localizar2 from '../modais/modais_clientes/modal_localizar';
 
 export default function CadCliente() {
 
     const selectSexo = useRef(null)
+
 
     const handleselectSexo = () => {
         const sexo = selectSexo.current.value;
@@ -35,6 +36,32 @@ export default function CadCliente() {
             customClass: {
                 filter: 'my-swal'
             }
+        });
+    }
+
+    const Cancelar = () => {
+        Swal.fire({
+            title: "Deseja Cancelar?",
+            text: "As informações não serão salvas",
+            icon: "warning",
+            iconColor: "orange",
+            showCancelButton: true,
+            cancelButtonColor: "#d33",
+            confirmButtonColor: "rgb(40, 167, 69)",
+            cancelButtonText: "Cancelar",
+            confirmButtonText: "Confirmar",
+            reverseButtons: true,
+            backdrop: "rgba(0,0,0,0.7)",
+
+        }).then((result) => {
+            // if (result.isConfirmed) {
+            //     Swal.fire({
+            //         title: "Deleted!",
+            //         text: "Your file has been deleted.",
+            //         icon: "success",
+            //         confirmButtonColor: "rgb(40, 167, 69)",
+            //     });
+            // }
         });
     }
 
@@ -66,7 +93,7 @@ export default function CadCliente() {
                 <button id="novoCliente" onClick={Novo}>Novo</button>
                 <button id="alterarCliente">Alterar</button>
                 <button id="excluirCliente">Excluir</button>
-                <button id="localizarCliente" onClick={Pesquisar}>Localizar</button>
+                <button id="localizarCliente" onClick={Cancelar}>Localizar</button>
             </div>
 
             <form id="clienteForm" className={styles.form}>
@@ -114,7 +141,7 @@ export default function CadCliente() {
                     </select>
                 </div>
 
-                
+
 
 
                 <div className={`${styles.grid_item} ${styles.grid_telefone}`}>
@@ -140,11 +167,11 @@ export default function CadCliente() {
                     </select>
                 </div>
 
-                
+
             </form>
 
             <div className={styles.footer_form}>
-                <button type="button" onclick="cancelarAcao()" className={styles.button_cancel}>Cancelar</button>
+                <button type="reset" onClick={Cancelar} className={styles.button_cancel}>Cancelar</button>
                 <button type="submit" className={styles.button_submit}>Salvar</button>
             </div>
 

@@ -8,7 +8,8 @@ import CadCliente from "./components/cadcliente";
 import Veiculos from "./components/veiculos";
 import Servicos from "./components/servicos";
 import FullCalendar from "./components/agenda/index";
-import Localizar from "./components/modais";
+import Localizar2 from "./components/modais/modais_clientes/modal_localizar";
+
 
 export default function Home() {
 
