@@ -1,9 +1,12 @@
+.title_page{
+  padding-left: 20px;
+}
+
 .button_group {
-  margin: 20px;
+  padding: 20px;
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(8, 1fr);
-  gap: 15px;
+  gap:  0 15px;
 }
 
 .button_group button {
@@ -25,7 +28,7 @@
 }
 
 .form {
-  margin: 30px 0;
+  margin: 20px 0;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
@@ -98,7 +101,23 @@
   flex-direction: column;
 }
 
-.grid_item_small {
+.grid_codigo, .grid_situacao, .grid_duracao, .grid_preco{
+  grid-column: span 2;
+}
+
+.grid_categoria, .grid_nome {
+  grid-column: span 5;
+}
+
+.grid_descricao{
+  grid-column: span 8;
+}
+
+.grid_observacoes {
+  grid-column: span 10;
+}
+
+/* .grid_item_small {
   grid-column: span 2;
 }
 
@@ -116,7 +135,7 @@
 
 .grid_item_descricao {
   grid-column: span 8;
-}
+} */
 
 .table {
   width: 100%;

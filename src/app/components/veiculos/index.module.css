@@ -1,9 +1,12 @@
+.title_page{
+  padding-left: 20px;
+}
+
 .button_group {
-  margin: 20px;
+  padding: 20px;
   display: grid;
-  width: 100%;
   grid-template-columns: repeat(8, 1fr);
-  gap: 15px;
+  gap:  0 15px;
 }
 
 .button_group button {
@@ -25,7 +28,7 @@
 }
 
 .form {
-  margin: 30px 0;
+  margin: 20px 0;
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 8px;
@@ -67,7 +70,7 @@
 }
 
 .button_submit:hover {
-  background-color: #dd8800;
+  background-color: #f39200;
   color: #222;
 }
 
@@ -89,6 +92,25 @@
   color: #222;
 }
 
+.select_proprietario, .select_modelo, .select_cor, .select_combustivel {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid #8d8c8c;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* font-size: 1em !important; */
+  font-size: 18px;
+  background-color: #f9f9f9;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5H7z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  cursor: pointer;
+}
+
 .grid {
   display: contents;
 }
@@ -98,7 +120,23 @@
   flex-direction: column;
 }
 
-.grid_item_small {
+.grid_codigo, .grid_categoria, .grid_placa, .grid_situacao{
+  grid-column: span 2;
+}
+
+
+.grid_modelo, .grid_marca, .grid_ano, .grid_cor, .grid_combustivel, .grid_proprietario{
+  grid-column: span 3;
+}
+
+.grid_observacoes{
+  grid-column: span 10;
+}
+
+ .input_situacao, .input_proprietario, .input_modelo {
+  flex: 1;
+}
+/* .grid_item_small {
   grid-column: span 2;
 }
 
@@ -116,7 +154,7 @@
 
 .grid_item_descricao {
   grid-column: span 8;
-}
+} */
 
 .table {
   width: 100%;

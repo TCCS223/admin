@@ -36,7 +36,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px 15px;
- 
 }
 
 .label_cliente {
@@ -66,7 +65,7 @@
   flex-direction: column;
 }
 
-.grid_codigo {
+.grid_codigo, .grid_situacao {
   grid-column: span 2;
 }
 
@@ -82,14 +81,14 @@
   grid-column: span 6;
 }
 
-.grid_observacoes, .grid_email  {
-  grid-column: span 12;
+.grid_observacoes {
+  grid-column: span 10;
 }
 .grid_email  {
   grid-column: span 8;
 }
 
-.input_sexo, .input_acesso {
+.input_sexo, .input_acesso, .input_situacao {
   flex: 1;
 }
 
@@ -162,7 +161,7 @@
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 15px;
-  padding: 90px 40px 90px 20px;
+  padding:  50px 40px 50px 20px;
 }
 
 .button_submit {
@@ -179,7 +178,7 @@
 }
 
 .button_submit:hover {
-  background-color: #dd8800;
+  background-color: #f39200;
   color: #222;
 }
 
@@ -331,7 +330,7 @@
     grid-template-columns: repeat(4, 1fr);
   }
   
-  .grid_codigo {
+  .grid_codigo, .grid_situacao {
     grid-column: span 4;
   }
   
