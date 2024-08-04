@@ -2,10 +2,14 @@
 
 import styles from '../modal_localizar/index.module.css'
 
-export default function Localizar2() {
-    return (
-        <div id="localizar" className={styles.teste}>
-            <div className={styles.modal}></div>
-        </div>
-    )
+export default function Modal({isOpen}) {
+
+    if (isOpen) {
+        return (
+            <div className={styles.teste}>
+                <div className={styles.modal}>localizar</div>
+            </div>
+        )
+    }
+return null;
 }
