@@ -16,7 +16,20 @@ export default function Modal({ isOpen, onClose }) {
             <div className={styles.teste} onClick={handleOutsideClick}>
                 <div className={styles.modal}>
                     <span className={styles.close} onClick={onClose}></span>
-                    Localizaraiai
+
+                    <h1 className={styles.titulo}>
+                        Busca avançada
+                    </h1>
+
+                    <h2 className={styles.titulonome}>
+                        Pesquisar por nome
+                    </h2>
+
+                    <input type="text" className={styles.input1} id="input1"/>
+
+                    <button className={styles.botaopesquisar}>
+                        Pesquisar
+                    </button>
                 </div>
             </div>
         );
