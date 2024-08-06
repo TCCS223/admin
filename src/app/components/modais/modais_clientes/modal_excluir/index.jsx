@@ -2,7 +2,7 @@
 
 import styles from '../modal_excluir/index.module.css'
 
-export default function ModalEx({isOpen}) {
+export default function Modalexcluir({isOpen}) {
 
     if (isOpen) {
         return (
@@ -13,3 +13,6 @@ export default function ModalEx({isOpen}) {
     }
 return null;
 }
+
+
+

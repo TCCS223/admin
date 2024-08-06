@@ -20,3 +20,6 @@ refatoração do código caso PRONTIDÃO
 (TAREFAS SECUNDÁRIAS)
 
 admin - fixar logo header, favicon header
+
+
+ICONES - ICONIFY -> MATERIAL DESIGN ICONES

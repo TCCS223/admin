@@ -1,7 +1,6 @@
 'use client';
 import React from "react";
 import { useEffect, useState } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 
 import styles from "./page.module.css";
 import CadCliente from "./components/cadcliente";
@@ -15,7 +14,7 @@ export default function Home() {
 
     const [modalOpen, setModalOpen] = useState(false); // Estado para controlar a exibição do modal
     const [tela, setTela] = useState(0);
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    // const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     useEffect(() => {
         const buttons = document.querySelectorAll(`.${styles.sidebar} button`);

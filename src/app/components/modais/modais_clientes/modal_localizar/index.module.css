@@ -5,11 +5,30 @@
     left: 0;
     right: 0;
     background-Color: rgb(0,0,0, 0.7);
-    z-index: 1000;
-
-
-    
+    z-index: 1000;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+
+
+
+
+.close {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z'/%3E%3C/svg%3E");
+    display: flex;
+    position: absolute;
+    /* background-color: red; */
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+  }
 
 .modal {
     width: 25%;
@@ -24,4 +43,6 @@
     justify-content: space-around;
     flex-direction: column;
     color: aliceblue;
+   position: relative;
 }
+

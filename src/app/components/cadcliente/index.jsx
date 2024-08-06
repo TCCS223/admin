@@ -9,10 +9,19 @@ import React, { useRef } from "react";
 
 export default function CadCliente() {
 
-    const [openModal, setOpenModal] = useState(false)
-    const [openModal2, setOpenModal2] = useState(false)
+    // const [modalLocalizar, setModalLocalizar] = useState(false)
+    // const [openModal2, setOpenModal2] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const selectSexo = useRef(null)
+
+    const openModal = () => {
+        setIsModalOpen(true);
+      };
+    
+      const closeModal = () => {
+        setIsModalOpen(false);
+      };
 
 
     const handleselectSexo = () => {
@@ -95,14 +104,15 @@ export default function CadCliente() {
             <div className={styles.button_group}>
                 <button id="novoCliente" onClick={Novo}>Novo</button>
                 <button id="alterarCliente">Alterar</button>
-                <button id="excluirCliente" onClick={() => setOpenModal2(true)}>Excluir</button>
-                <button id="localizarCliente" onClick={() => setOpenModal(true)}>Localizar</button>
+                <button id="excluirCliente" onClick={openModal}>Excluir</button>
+                <button id="localizarCliente" onClick={() => setIsModalOpen(true)}>Localizar</button>
             </div>
 
-            <Modal isOpen={openModal}></Modal>
-            <ModalEx isOpen={openModal2}></ModalEx>
+            {/* <Modal isOpen={modalLocalizar} /> */}
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
+            {/* <ModalEx isOpen={openModal2}></ModalEx> */}
             
-      
+            
 
             <form id="clienteForm" className={styles.form}>
 

@@ -7,16 +7,21 @@
     background-Color: rgb(0,0,0, 0.7);
     z-index: 1000;
 
+
+    
 }
 
-.modalexcluir {
+.modal {
     width: 25%;
     height: 40rem;
-    background-color: rgb(70, 18, 76);
-
+    background-color: rgb(21, 18, 76);
+    margin: auto;
     border: 3px solid rgb(160, 160, 160);
     border-radius: 1.5rem;
     padding: 15px;
-
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
     color: aliceblue;
 }
