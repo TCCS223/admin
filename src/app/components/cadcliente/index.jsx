@@ -4,51 +4,28 @@ import styles from './index.module.css';
 import Swal from 'sweetalert2';
 import { useState } from 'react';
 import React, { useRef } from "react";
- import Modal from '../modais/modais_clientes/modal_localizar';
- import ModalEx from '../modais/modais_clientes/modal_excluir';
+ import ModalConsulta from '../modais/modais_clientes/modal_localizar';
 
 export default function CadCliente() {
 
-    // const [modalLocalizar, setModalLocalizar] = useState(false)
-    // const [openModal2, setOpenModal2] = useState(false)
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false); // Declara um estado chamado 'isModalOpen' com valor inicial 'false'. 'setIsModalOpen' é a função para atualizar o valor de 'isModalOpen'.
 
-    const selectSexo = useRef(null)
-
-    const openModal = () => {
-        setIsModalOpen(true);
-      };
+    const selectSexo = useRef(null); // Declara uma referência chamada 'selectSexo' e a inicializa com 'null'. 'useRef' cria uma referência que pode ser atribuída a um elemento DOM.
     
-      const closeModal = () => {
-        setIsModalOpen(false);
-      };
+    const openModal = () => { // Define uma função chamada 'openModal' que altera o estado 'isModalOpen' para 'true'.
+        setIsModalOpen(true); // Altera o estado 'isModalOpen' para 'true', o que pode ser usado para abrir um modal.
+    };
+    
+    const closeModal = () => { // Define uma função chamada 'closeModal' que altera o estado 'isModalOpen' para 'false'.
+        setIsModalOpen(false); // Altera o estado 'isModalOpen' para 'false', o que pode ser usado para fechar um modal.
+    };
+    
 
 
     const handleselectSexo = () => {
         const sexo = selectSexo.current.value;
         console.log(sexo)
 
-    }
-
-    const Pesquisar = () => {
-        Swal.fire({
-            width: 1200,
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'ok',
-            html:
-                '<input id="swal-input1">' +
-                '<input id="swal-input2" >',
-            input: "email",
-            inputLabel: "Your email address",
-            inputPlaceholder: "Enter your email address",
-            showCloseButton: "true",
-            backdrop: `rgba(0,0,0,0.8)`,
-            customClass: {
-                filter: 'my-swal'
-            }
-        });
     }
 
     const Cancelar = () => {
@@ -77,42 +54,17 @@ export default function CadCliente() {
         });
     }
 
-    const Novo = () => {
-        Swal.fire({
-            width: 1200,
-            title: 'Error!',
-            text: 'Do you want to continue',
-            icon: 'error',
-            confirmButtonText: 'ok',
-            html:
-                '<input id="swal-input1">' +
-                '<input id="swal-input2" >',
-            input: "email",
-            inputLabel: "Your email address",
-            inputPlaceholder: "Enter your email address",
-            showCloseButton: "true",
-            backdrop: `rgba(56,79,126,0.8)`,
-            customClass: {
-                filter: 'my-swal'
-            }
-        });
-    }
-
     return (
         <div id="clientes" className={`${styles.content_section}`}>
             <h2 className={styles.title_page}>Gerenciamento de Clientes</h2>
             <div className={styles.button_group}>
-                <button id="novoCliente" onClick={Novo}>Novo</button>
+                <button id="novoCliente">Novo</button>
                 <button id="alterarCliente">Alterar</button>
                 <button id="excluirCliente" onClick={openModal}>Excluir</button>
                 <button id="localizarCliente" onClick={() => setIsModalOpen(true)}>Localizar</button>
             </div>
 
-            {/* <Modal isOpen={modalLocalizar} /> */}
-            <Modal isOpen={isModalOpen} onClose={closeModal} />
-            {/* <ModalEx isOpen={openModal2}></ModalEx> */}
-            
-            
+            <ModalConsulta isOpen={isModalOpen} onClose={closeModal} />    
 
             <form id="clienteForm" className={styles.form}>
 
@@ -158,9 +110,6 @@ export default function CadCliente() {
                         <option value="1" className={styles.option}>Administrador</option>
                     </select>
                 </div>
-
-
-
 
                 <div className={`${styles.grid_item} ${styles.grid_telefone}`}>
                     <label for="telefone_cliente" className={styles.label_cliente}>Telefone</label>
