@@ -1,29 +1,16 @@
-// Importa os estilos CSS específicos para o modal da pasta indicada
 import styles from '../modal_localizar/index.module.css';
 
-// Importa um ícone de fechamento (no formato SVG) da pasta public
-// import Close from "/public/close.svg";
-
-// Exporta a função do componente ModalConsulta como padrão
 export default function ModalConsulta({ isOpen, onClose }) {
-    // Função para lidar com cliques fora do modal
     const handleOutsideClick = (e) => {
-        // Verifica se o clique foi na área fora do modal usando a classe 'teste'
         if (e.target.classList.contains(styles.teste)) {
-            // Chama a função onClose para fechar o modal
             onClose();
         }
     };
 
-    // Se a prop 'isOpen' for verdadeira, renderiza o modal
     if (isOpen) {
         return (
-            // Div principal do modal que detecta cliques fora do modal
             <div className={styles.container} onClick={handleOutsideClick}>
-                {/* Div interna do modal */}
                 <div className={styles.modal}>
-                    {/* Span que funciona como botão para fechar o modal */}
-
                     <div className={styles.titleModal}>
                         <h1>Busca avançada</h1>
                         <span className={styles.close} onClick={onClose}></span>
@@ -35,18 +22,22 @@ export default function ModalConsulta({ isOpen, onClose }) {
                             <div className={styles.radioContainer}>
                                 <div className={styles.radioColumn}>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> Nome
+                                        <input type="radio" name="search" className={styles.radioInput} />
+                                        <span className={styles.radioCustom}></span> Nome
                                     </label>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> CPF
+                                        <input type="radio" name="search" className={styles.radioInput} />
+                                        <span className={styles.radioCustom}></span> CPF
                                     </label>
                                 </div>
                                 <div className={styles.radioColumn}>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> Telefone
+                                        <input type="radio" name="search" className={styles.radioInput} />
+                                        <span className={styles.radioCustom}></span> Telefone
                                     </label>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> Email
+                                        <input type="radio" name="search" className={styles.radioInput} />
+                                        <span className={styles.radioCustom}></span> Email
                                     </label>
                                 </div>
                             </div>
@@ -58,10 +49,12 @@ export default function ModalConsulta({ isOpen, onClose }) {
                             <p className={styles.optionGroupTitle}>Filtro</p>
                             <div className={styles.radioRow}>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} /> Começa
+                                    <input type="radio" name="filter" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Começa
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} /> Contém
+                                    <input type="radio" name="filter" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Contém
                                 </label>
                             </div>
                         </div>
@@ -72,41 +65,50 @@ export default function ModalConsulta({ isOpen, onClose }) {
                             <p className={styles.optionGroupTitle}>Situação</p>
                             <div className={styles.radioRow}>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> Ativo
+                                    <input type="radio" name="status" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Ativo
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> Inativo
+                                    <input type="radio" name="status" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Inativo
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> Todos
+                                    <input type="radio" name="status" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Todos
                                 </label>
                             </div>
                         </div>
                     </div>
+                    
                     <div className={styles.searchBar}>
                         <input type="text" placeholder="Digite aqui..." className={styles.searchInput} />
-                        {/* <input type="date" id="data_nasc_cliente" name="data_nasc_cliente" required className={styles.input_cliente} /> */}
-
                         <button className={styles.searchButton}>Pesquisar</button>
                     </div>
-                    <div className={styles.resultTable}>
-                        {/* Aqui vai a tabela de resultados */}
-                    </div>
-                    {/* <div className={styles.filtros}>
-                        <div className={styles.opcoesPesquisa}>
-                            <h1>Opções de pesquisa</h1>
-                        </div>
-                        <div className={styles.filtro}></div>
-                        <div className={styles.situacao}></div>
-                    </div>
-                    <div className={styles.pesquisa}></div>
-                    <div className={styles.tabela}></div> */}
 
-
+                    <div className={styles.resultTableContainer}>
+                        <table className={styles.resultTable}>
+                            <thead className={styles.tableHead}>
+                                <tr className={styles.tableRow}>
+                                    <th className={`${styles.tableHeader} ${styles.id}`}>Código</th>
+                                    <th className={`${styles.tableHeader} ${styles.nome}`}>Nome</th>
+                                    <th className={`${styles.tableHeader} ${styles.cpf}`}>CPF</th>
+                                    <th className={`${styles.tableHeader} ${styles.dataNasc}`}>Data de Nascimento</th>
+                                    <th className={`${styles.tableHeader} ${styles.sexo}`}>Sexo</th>
+                                    <th className={`${styles.tableHeader} ${styles.telefone}`}>Telefone</th>
+                                    <th className={`${styles.tableHeader} ${styles.email}`}>Email</th>
+                                    <th className={`${styles.tableHeader} ${styles.observ}`}>Observações</th>
+                                    <th className={`${styles.tableHeader} ${styles.acesso}`}>Acesso</th>
+                                    <th className={`${styles.tableHeader} ${styles.situacao}`}>Situação</th>
+                                </tr>
+                            </thead>
+                            <tbody className={styles.tableBody}>
+                                {/* Aqui vão as linhas de dados */}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         );
     }
-    // Se a prop 'isOpen' for falsa, não renderiza nada
     return null;
 }
