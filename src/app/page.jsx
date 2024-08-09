@@ -1,6 +1,7 @@
 'use client';
 import React from "react";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 import styles from "./page.module.css";
 import CadCliente from "./components/cadcliente";
@@ -8,6 +9,7 @@ import Veiculos from "./components/veiculos";
 import Servicos from "./components/servicos";
 import FullCalendar from "./components/agenda/index";
 import Localizar2 from "./components/modais/modais_clientes/modal_localizar";
+// import img from '../../public/logo.png'
 
 
 export default function Home() {
@@ -47,6 +49,9 @@ export default function Home() {
         <div className={styles.grid_container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>Painel Administrativo da Mecânica</h1>
+                <div className={styles.button_logout}>
+                <button onClick={() => setModalOpen(true)}>Logout</button>
+                </div>
             </div>
             <div className={styles.sidebar}>
                 <button data-target="#clientes" onClick={() => setTela(1)}>Clientes</button>
@@ -70,56 +75,18 @@ export default function Home() {
                                         <FullCalendar /> // trocar pelo histórico
                                         : <></>
                 }
-
-
-{/* 
-<Button onPress={onOpen}>Open Modal</Button>
-<>
-     
-
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false} isKeyboardDismissDisabled={true} className={styles.modal}>
-        <ModalContent>
-          {(onClose) => (
-            <>
-
-              <ModalHeader className={styles.header}>Modal Title</ModalHeader>
-              <ModalBody className={styles.body}>
-                <fieldset className={styles.fieldset}>
-                  <label htmlFor="" className={styles.label}>NOME</label>
-                  <input type="text" className={styles.input} required />
-                </fieldset>
-
-                <fieldset className={styles.fieldset}>
-                  <label htmlFor="" className={styles.label}>TELEFONE</label>
-                  <input type="text" className={styles.input} required/>
-                </fieldset>
-
-                <fieldset className={styles.fieldset}>
-                  <label htmlFor="" className={styles.label}>EMAIL</label>
-                  <input type="text" className={styles.input} required/>
-                </fieldset>
-                
-                <fieldset className={styles.fieldset}>
-                  <label htmlFor="" className={styles.label}>SENHA</label>
-                  <input type="password" className={styles.input} required/>
-                </fieldset>
-
-                
-              </ModalBody>
-              <ModalFooter>
-                <Button className={`${styles.button} ${styles.fechar}`} color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
-                <Button className={`${styles.button} ${styles.confirmar}`} color="primary" onPress={onClose}>
-                  Action
-                </Button>
-              </ModalFooter>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
-    </> */}
             </div>
+
+            <div className={styles.logo}>
+            <Image
+              src={'logo.png'}
+              width={190}
+              height={45}
+              alt={"logo"}
+              unoptimized={true}
+            />
+            </div>
+
         </div>
     )
 }

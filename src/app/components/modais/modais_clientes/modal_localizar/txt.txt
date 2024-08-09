@@ -1,0 +1,57 @@
+{/* Título principal do modal */}
+                    <h1 className={styles.titulo}>
+                        Busca avançada
+                    </h1>
+
+                    {/* Subtítulo do modal */}
+                    <h2 className={styles.titulonome}>
+                        Pesquisar por nome
+                    </h2>
+
+                    {/* Campo de entrada de texto para pesquisa */}
+                    <input type="text" className={styles.input1} id="input1"/>
+
+                    {/* Botão para iniciar a pesquisa */}
+                    <button className={styles.botaopesquisar}>
+                        Pesquisar
+                    </button>
+
+                    .titulo {
+    font-size: 30px;
+    position: absolute;
+    left: 3rem;
+    top: 5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #ff9d00;
+    padding-bottom: 15px;
+    width: 50rem;
+}
+
+.titulonome {
+    position: absolute;
+    left: 3rem;
+    top: 9.6rem;
+}
+
+.input1 {
+    position: absolute;
+    left: 3rem;
+    top: 11rem;
+    width: 590px;
+}
+
+.botaopesquisar {
+    width: 140px;
+    height: 21px;
+    position: absolute;
+    top: 11rem;
+    right: 3.5rem;
+    background-color: #ff9d00;
+    border: none;
+    cursor: pointer;
+}
+
+.botaopesquisar:hover {
+    background-color: #e4910b;
+    transform: scale(0.98);
+}
