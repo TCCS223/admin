@@ -4,7 +4,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-Color: rgb(0, 0, 0, 0.7);
+    background-Color: rgb(0, 0, 0, 0.8);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -14,13 +14,14 @@
 .modal {
     width: 55%;
     height: 30rem;
-    background-color: #232323;
+    background-color: #ffffff;
     margin: auto;
     /* border: 3px solid rgb(160, 160, 160); */
     border-radius: 1.5rem;
-    padding: 2.5rem 1rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: start;
     flex-direction: column;
     color: aliceblue;
     position: relative;
@@ -32,8 +33,11 @@
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-radius: 1rem;
+        border-radius: 0.3125rem;
+
     width: 100%;
+    margin: auto;
+    background-color: #e6e5e5;
 }
 
 .optionGroup,
@@ -43,7 +47,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #989898;
+    /* background-color: #989898; */
     border-radius: calc(1rem - 10px);
     padding: 0.25rem;
 }
@@ -69,7 +73,7 @@
 .optionGroupTitle {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #000000;
 }
 
@@ -88,6 +92,7 @@
     display: flex;
     align-items: center;
     padding: 0.25rem 0;
+    color: #222;
 }
 
 .radioInput {
@@ -102,52 +107,67 @@
 
 .close {
     display: inline-block;
-    width: 2em;
-    height: 2em;
+    width: 1.75rem;
+    height: 1.75rem;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z'/%3E%3C/svg%3E");
     display: flex;
-    position: absolute;
-    top: 0.75rem;
-    right: 1rem;
+    background-position: center center;
+    /* position: absolute; */
+    /* top: 0.75rem;
+    right: 1rem; */
     cursor: pointer;
 }
 
+.titleModal{
+    padding-bottom: 0.5rem;
+    width: 100%;
+    border-bottom: 2px solid #ff9d00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-
-
-
-
-
-
-
+.titleModal h1{
+    font-size: clamp(1rem, 0.76rem + 1.28vw, 1.88rem);
+    font-weight: bold;
+    color: #222;
+}
 
 
 .searchInput {
     flex: 1;
     padding: 10px;
     font-size: 16px;
-    border-radius: 5px 0 0 5px;
-    border: none;
+    border: 2px solid #8d8c8c;
+    border-radius: 0.3125rem;
+    box-sizing: border-box;
+    margin-right: 10px;
 }
 
+.searchInput:focus {
+    border-color: #ff9d00;
+    outline: none;
+  }
+
 .searchButton {
-    padding: 10px 20px;
+    flex: 1;
+    max-width: 20%;
     font-size: 16px;
     background-color: #ff9d00;
     border: none;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0.3125rem;
     color: #fff;
     cursor: pointer;
+    font-weight: 600;
+    border: 0.15rem solid #f39200;
 }
 
-.searchButton:hover{
-    background-color: #;
-    .button_submit:hover {
-        background-color: #f39200;
-        color: #222;
-      }
+.searchButton:hover {
+    background-color: #f39200;
+    color: #222;
+    
 }
 
 .resultTable {
@@ -157,4 +177,12 @@
     border-radius: 10px;
     height: 200px;
     /* Defina a altura desejada */
+}
+
+
+.hr{
+    width: 2px;
+    /* height: 100%; */
+    border: none;
+    background-color: #ff9d00;
 }

@@ -61,7 +61,7 @@ export default function CadCliente() {
                 <button id="novoCliente">Novo</button>
                 <button id="alterarCliente">Alterar</button>
                 <button id="excluirCliente" onClick={openModal}>Excluir</button>
-                <button id="localizarCliente" onClick={() => setIsModalOpen(true)}>Localizar</button>
+                <button id="localizarCliente" onClick={openModal}>Localizar</button>
             </div>
 
             <ModalConsulta isOpen={isModalOpen} onClose={closeModal} />    

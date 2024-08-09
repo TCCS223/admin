@@ -23,15 +23,19 @@ export default function ModalConsulta({ isOpen, onClose }) {
                 {/* Div interna do modal */}
                 <div className={styles.modal}>
                     {/* Span que funciona como botão para fechar o modal */}
-                    <span className={styles.close} onClick={onClose}></span>
+
+                    <div className={styles.titleModal}>
+                        <h1>Busca avançada</h1>
+                        <span className={styles.close} onClick={onClose}></span>
+                    </div>
 
                     <div className={styles.searchOptions}>
                         <div className={styles.optionGroup}>
-                            <p className={styles.optionGroupTitle}>opções de pesquisa</p>
+                            <p className={styles.optionGroupTitle}>Opções de pesquisa</p>
                             <div className={styles.radioContainer}>
                                 <div className={styles.radioColumn}>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> nome
+                                        <input type="radio" name="search" className={styles.radioInput} /> Nome
                                     </label>
                                     <label className={styles.radioLabel}>
                                         <input type="radio" name="search" className={styles.radioInput} /> CPF
@@ -39,45 +43,51 @@ export default function ModalConsulta({ isOpen, onClose }) {
                                 </div>
                                 <div className={styles.radioColumn}>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> telefone
+                                        <input type="radio" name="search" className={styles.radioInput} /> Telefone
                                     </label>
                                     <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} /> email
+                                        <input type="radio" name="search" className={styles.radioInput} /> Email
                                     </label>
                                 </div>
                             </div>
                         </div>
 
+                        <hr className={styles.hr} />
+
                         <div className={styles.filterGroup}>
-                            <p className={styles.optionGroupTitle}>filtro</p>
+                            <p className={styles.optionGroupTitle}>Filtro</p>
                             <div className={styles.radioRow}>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} /> começa
+                                    <input type="radio" name="filter" className={styles.radioInput} /> Começa
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} /> contém
+                                    <input type="radio" name="filter" className={styles.radioInput} /> Contém
                                 </label>
                             </div>
                         </div>
 
+                        <hr className={styles.hr} />
+
                         <div className={styles.situationGroup}>
-                            <p className={styles.optionGroupTitle}>situação</p>
+                            <p className={styles.optionGroupTitle}>Situação</p>
                             <div className={styles.radioRow}>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> ativo
+                                    <input type="radio" name="status" className={styles.radioInput} /> Ativo
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> inativo
+                                    <input type="radio" name="status" className={styles.radioInput} /> Inativo
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="status" className={styles.radioInput} /> todos
+                                    <input type="radio" name="status" className={styles.radioInput} /> Todos
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div className={styles.searchBar}>
-                        <input type="text" placeholder="digite aqui" className={styles.searchInput} />
-                        <button className={styles.searchButton}>pesquisar</button>
+                        <input type="text" placeholder="Digite aqui..." className={styles.searchInput} />
+                        {/* <input type="date" id="data_nasc_cliente" name="data_nasc_cliente" required className={styles.input_cliente} /> */}
+
+                        <button className={styles.searchButton}>Pesquisar</button>
                     </div>
                     <div className={styles.resultTable}>
                         {/* Aqui vai a tabela de resultados */}
