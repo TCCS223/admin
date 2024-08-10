@@ -82,9 +82,114 @@ export default function ModalConsulta({ isOpen, onClose }) {
                                 </tr>
                             </thead>
                             <tbody className={styles.tableBody}>
-                                {/* Aqui vão as linhas de dados */}
-                                
-
+                            <tr>
+                                    <td>001</td>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Admin</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Maria Oliveira</td>
+                                    <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
+                                    <td>Inativo</td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Admin</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Maria Oliveira</td>
+                                    <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
+                                    <td>Inativo</td>
+                                </tr>
+                                <tr>
+                                    <td>001</td>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Admin</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Maria Oliveira</td>
+                                    <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
+                                    <td>Inativo</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

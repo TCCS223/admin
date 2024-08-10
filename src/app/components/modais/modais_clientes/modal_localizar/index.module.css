@@ -214,21 +214,13 @@
     padding: 0;
     width: 100%;
     margin-top: 20px;
-    /* background-color: #c00a0a; */
     border-radius: 0.3125rem;
     height: 60%;
-    overflow: auto;    /* Impede que o conteúdo do contêiner ultrapasse seus limites */
-}
-
-.tableWrapper {
-    overflow-x: auto;    /* Permite rolagem horizontal */
-    width: 100%;    /* Garante que o contêiner da tabela use toda a largura disponível no modal */
-    height: 100%;    /* Garante que o contêiner da tabela use toda a altura disponível no modal */
-    position: relative;    /* Garante que a rolagem horizontal não afete a posição do cabeçalho */
+    overflow: auto; 
 }
 
 .resultTable {
-    min-width: 120rem;    /* Define um tamanho mínimo para a tabela para garantir a rolagem horizontal */
+    min-width: 120rem; 
     border-collapse: collapse;
     text-align: left;
     color: #222;
@@ -246,22 +238,48 @@
 }
 
 .tableHeader {
-    width: auto;
-    padding: 0.5rem 0.75rem; /* Padding em rem */
+    padding: 0.5rem 0.75rem; 
     background-color: #ff9d00;
     color: #ffffff;
     font-weight: bold;
     text-align: left;
-    white-space: nowrap; /* Evita quebra de linha */
-    border: 0.0625rem solid #ccc; /*Border em rem*/
-    position: -webkit-sticky; /* Suporte para Safari */
+    white-space: nowrap;
+    border: 0.0625rem solid #ccc;
+    position: -webkit-sticky; 
     position: sticky;
-    top: 0; /* Fica fixo no topo */
-    z-index: 1; /* Garante que fique acima de outras linhas */
-    /* margin: 0; */
+    top: 0; 
+    z-index: 1; 
 }
 
-/* Definindo larguras individuais para cada coluna em rem */
+.id, .acesso, .situacao, .sexo {
+    width: 5rem;
+}
+
+.nome, .email, .observ {
+    width: 12em;
+}
+
+.cpf, .dataNasc, .telefone {
+    width: 7rem;
+}
+
+.tableBody {
+    background-color: #f5f5f5;
+}
+
+.tableBody tr:hover {
+    background-color: #e2e2e2;
+}
+
+.tableBody td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.tableBody tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+
 .id, .acesso, .situacao,.sexo {
     width: 5rem;
 }
@@ -272,22 +290,4 @@
 
 .cpf,.dataNasc, .telefone {
     width: 7rem;
-}
-
-.tableBody {
-    background-color: #ba3333;
-}
-
-.tableBody tr:hover {
-    background-color: #f5f5f5;
-}
-
-.tableBody td {
-    padding: 0.75rem;
-    /* Padding em rem */
-    border-bottom: 1px solid #ddd;
-}
-
-.tableBody tr:nth-child(even) td {
-    background-color: #f2f2f2;
 }

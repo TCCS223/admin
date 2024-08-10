@@ -16,6 +16,10 @@ export default function Home() {
 
     const [modalOpen, setModalOpen] = useState(false); // Estado para controlar a exibição do modal
     const [tela, setTela] = useState(0);
+
+    const teste = () => {
+        alert('Você clicou no ícone de power!');
+      };
     // const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     useEffect(() => {
@@ -49,9 +53,11 @@ export default function Home() {
         <div className={styles.grid_container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>Painel Administrativo da Mecânica</h1>
-                <div className={styles.button_logout}>
+                <span className={styles.power} onClick={teste}></span>
+                
+                {/* <div className={styles.button_logout}>
                 <button onClick={() => setModalOpen(true)}>Logout</button>
-                </div>
+                </div> */}
             </div>
             <div className={styles.sidebar}>
                 <button data-target="#clientes" onClick={() => setTela(1)}>Clientes</button>

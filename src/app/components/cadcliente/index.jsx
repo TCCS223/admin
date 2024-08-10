@@ -59,7 +59,7 @@ export default function CadCliente() {
             <h2 className={styles.title_page}>Gerenciamento de Clientes</h2>
             <div className={styles.button_group}>
                 <button id="novoCliente">Novo</button>
-                <button id="alterarCliente">Alterar</button>
+                <button id="alterarCliente" onClick={openModal}>Alterar</button>
                 <button id="excluirCliente" onClick={openModal}>Excluir</button>
                 <button id="localizarCliente" onClick={openModal}>Localizar</button>
             </div>
