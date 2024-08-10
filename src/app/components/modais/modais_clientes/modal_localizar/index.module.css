@@ -12,13 +12,12 @@
 }
 
 .modal {
-    width: 55%;
+    width: 50%;
     height: 30rem;
     background-color: #ffffff;
     margin: auto;
-    /* border: 3px solid rgb(160, 160, 160); */
     border-radius: 1.5rem;
-    padding: 1rem;
+    padding: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -26,48 +25,41 @@
     color: aliceblue;
     position: relative;
     box-shadow: 3px 2px 22px 1px #333;
-    /* border: 0.125rem solid #ff9d00; */
+    /* border: 3px solid rgb(160, 160, 160); */
+    /* border: 0.25rem solid #999999; */
 }
 
 .searchOptions {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 0;
     border-radius: 0.3125rem;
-
     width: 100%;
     margin: 1rem auto;
     background-color: #e6e5e5;
 }
 
-.optionGroup,
-.filterGroup,
-.situationGroup {
-    width: 30%;
+.optionGroup{
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* background-color: #989898; */
+    border-radius: calc(1rem - 10px);
+    padding: 0.25rem;
+}
+.situationGroup {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: calc(1rem - 10px);
     padding: 0.25rem;
 }
 
-.situationGroup,
-.filterGroup {
-    display: flex;
-    flex-direction: column;
-}
-
-.situationGroup .radioRow,
-.filterGroup .radioRow {
+.optionGroup .radioRow,
+.situationGroup .radioRow{
     display: flex;
     align-items: center;
-    /* height: 50%; */
-    justify-content: space-between;
-}
-
-.filterGroup .radioRow .radioLabel {
-    width: 50%;
 }
 
 .optionGroupTitle {
@@ -93,6 +85,7 @@
     align-items: center;
     padding: 0.25rem 0;
     color: #222;
+    margin-right: 2rem;
 }
 
 .radioInput {
@@ -113,10 +106,10 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z'/%3E%3C/svg%3E");
     display: flex;
     background-position: center center;
-    /* position: absolute; */
-    /* top: 0.75rem;
-    right: 1rem; */
     cursor: pointer;
+    /* position: absolute;
+    top: 0.75rem;
+    right: 1rem; */
 }
 
 .titleModal {
@@ -169,9 +162,10 @@
 
 .hr {
     width: 2px;
-    /* height: 100%; */
+    height: 100%;
     border: none;
     background-color: #ff9d00;
+    margin: auto;
 }
 
 /* Estiliza o círculo do radio button personalizado */
@@ -222,7 +216,7 @@
     margin-top: 20px;
     /* background-color: #c00a0a; */
     border-radius: 0.3125rem;
-    height: 200px;
+    height: 60%;
     overflow: auto;    /* Impede que o conteúdo do contêiner ultrapasse seus limites */
 }
 
@@ -259,11 +253,12 @@
     font-weight: bold;
     text-align: left;
     white-space: nowrap; /* Evita quebra de linha */
-    border: 0.0625rem solid #ccc; /* Border em rem */
+    border: 0.0625rem solid #ccc; /*Border em rem*/
     position: -webkit-sticky; /* Suporte para Safari */
     position: sticky;
     top: 0; /* Fica fixo no topo */
     z-index: 1; /* Garante que fique acima de outras linhas */
+    /* margin: 0; */
 }
 
 /* Definindo larguras individuais para cada coluna em rem */
@@ -280,7 +275,7 @@
 }
 
 .tableBody {
-    background-color: #ffffff;
+    background-color: #ba3333;
 }
 
 .tableBody tr:hover {

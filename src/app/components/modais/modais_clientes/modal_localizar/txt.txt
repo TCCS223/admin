@@ -55,3 +55,21 @@
     background-color: #e4910b;
     transform: scale(0.98);
 }
+
+
+
+                        {/* <hr className={styles.hr} />
+
+                        <div className={styles.filterGroup}>
+                            <p className={styles.optionGroupTitle}>Filtro</p>
+                            <div className={styles.radioRow}>
+                                <label className={styles.radioLabel}>
+                                    <input type="radio" name="filter" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Começa
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input type="radio" name="filter" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Contém
+                                </label>
+                            </div>
+                        </div> */}

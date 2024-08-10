@@ -19,42 +19,22 @@ export default function ModalConsulta({ isOpen, onClose }) {
                     <div className={styles.searchOptions}>
                         <div className={styles.optionGroup}>
                             <p className={styles.optionGroupTitle}>Opções de pesquisa</p>
-                            <div className={styles.radioContainer}>
-                                <div className={styles.radioColumn}>
-                                    <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} />
-                                        <span className={styles.radioCustom}></span> Nome
-                                    </label>
-                                    <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} />
-                                        <span className={styles.radioCustom}></span> CPF
-                                    </label>
-                                </div>
-                                <div className={styles.radioColumn}>
-                                    <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} />
-                                        <span className={styles.radioCustom}></span> Telefone
-                                    </label>
-                                    <label className={styles.radioLabel}>
-                                        <input type="radio" name="search" className={styles.radioInput} />
-                                        <span className={styles.radioCustom}></span> Email
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr className={styles.hr} />
-
-                        <div className={styles.filterGroup}>
-                            <p className={styles.optionGroupTitle}>Filtro</p>
                             <div className={styles.radioRow}>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} />
-                                    <span className={styles.radioCustom}></span> Começa
+                                    <input type="radio" name="search" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Código
                                 </label>
                                 <label className={styles.radioLabel}>
-                                    <input type="radio" name="filter" className={styles.radioInput} />
-                                    <span className={styles.radioCustom}></span> Contém
+                                    <input type="radio" name="search" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Nome
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input type="radio" name="search" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> CPF
+                                </label>
+                                <label className={styles.radioLabel}>
+                                    <input type="radio" name="search" className={styles.radioInput} />
+                                    <span className={styles.radioCustom}></span> Telefone
                                 </label>
                             </div>
                         </div>
@@ -79,7 +59,7 @@ export default function ModalConsulta({ isOpen, onClose }) {
                             </div>
                         </div>
                     </div>
-                    
+
                     <div className={styles.searchBar}>
                         <input type="text" placeholder="Digite aqui..." className={styles.searchInput} />
                         <button className={styles.searchButton}>Pesquisar</button>
@@ -103,6 +83,8 @@ export default function ModalConsulta({ isOpen, onClose }) {
                             </thead>
                             <tbody className={styles.tableBody}>
                                 {/* Aqui vão as linhas de dados */}
+                                
+
                             </tbody>
                         </table>
                     </div>
