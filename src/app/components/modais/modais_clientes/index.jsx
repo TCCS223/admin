@@ -1,6 +1,6 @@
 import styles from './index.module.css';
 
-export default function ConsultaCliente({ isOpen, onClose }) {
+export default function ConsultaVeiculo({ isOpen, onClose }) {
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains(styles.teste)) {
             onClose();
@@ -68,7 +68,6 @@ export default function ConsultaCliente({ isOpen, onClose }) {
                     <div className={styles.resultTableContainer}>
                         <table className={styles.resultTable}>
                             <thead className={styles.tableHead}>
-                                <tr className={styles.tableRow}>
                                     <th className={`${styles.tableHeader} ${styles.id}`}>Código</th>
                                     <th className={`${styles.tableHeader} ${styles.nome}`}>Nome</th>
                                     <th className={`${styles.tableHeader} ${styles.cpf}`}>CPF</th>
@@ -79,7 +78,6 @@ export default function ConsultaCliente({ isOpen, onClose }) {
                                     <th className={`${styles.tableHeader} ${styles.observ}`}>Observações</th>
                                     <th className={`${styles.tableHeader} ${styles.acesso}`}>Acesso</th>
                                     <th className={`${styles.tableHeader} ${styles.situacao}`}>Situação</th>
-                                </tr>
                             </thead>
                             <tbody className={styles.tableBody}>
                             <tr>

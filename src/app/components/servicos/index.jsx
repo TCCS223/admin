@@ -1,15 +1,34 @@
+'use client'
+
 import styles from './index.module.css';
+import { useState } from 'react';
+import ConsultaVeiculo from '../modais/modais_clientes';
+
 
 export default function Servicos() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // Declara um estado chamado 'isModalOpen' com valor inicial 'false'. 'setIsModalOpen' é a função para atualizar o valor de 'isModalOpen'.
+    
+    const openModal = () => { // Define uma função chamada 'openModal' que altera o estado 'isModalOpen' para 'true'.
+        setIsModalOpen(true); // Altera o estado 'isModalOpen' para 'true', o que pode ser usado para abrir um modal.
+    };
+    
+    const closeModal = () => { // Define uma função chamada 'closeModal' que altera o estado 'isModalOpen' para 'false'.
+        setIsModalOpen(false); // Altera o estado 'isModalOpen' para 'false', o que pode ser usado para fechar um modal.
+    };
+
     return (
         <div id="servicos" className={`${styles.content_section}`}>
             <h2 className={styles.title_page}>Gerenciamento de Serviços</h2>
             <div className={styles.button_group}>
-                <button id="novoServico">Novo</button>
-                <button id="alterarServico">Alterar</button>
-                <button id="excluirServico">Excluir</button>
-                <button id="localizarServico">Localizar</button>
+                <button id="novoCliente">Novo</button>
+                <button id="alterarCliente" onClick={openModal}>Alterar</button>
+                <button id="excluirCliente" onClick={openModal}>Excluir</button>
+                <button id="localizarCliente" onClick={openModal}>Localizar</button>
             </div>
+            
+            <ConsultaVeiculo isOpen={isModalOpen} onClose={closeModal} />  
+
             <form id="servicoForm" className={styles.form}>
 
                 <input type="hidden" id="servicoId" className={styles.input_servicos} />
@@ -127,17 +146,7 @@ export default function Servicos() {
                 <button type="submit" className={styles.button_submit}>Salvar</button>
                 <button type="reset" className={styles.button_cancel}>Cancelar</button>
             </div>
-            {/* <table id="tabelaServicos" className={styles.table}>
-                        <thead>
-                            <tr>
-                                <th className={styles.th}>Descrição</th>
-                                <th className={styles.th}>Preço</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            Linhas de dados aqui
-                        </tbody>
-                    </table> */}
+
         </div>
     );
 }

@@ -218,6 +218,7 @@
     height: 60%;
     overflow: auto;
     position: relative;
+    
 }
 
 .resultTable {
@@ -226,6 +227,7 @@
     text-align: left;
     color: #222;
     margin: 0;
+   position: relative;
 }
 
 .tableHead {
@@ -235,13 +237,13 @@
     position: sticky; /* Fixa a linha de cabeçalho */
     top: 0;
     z-index: 10;
-    border: 2px solid #000000; /* Borda inferior do cabeçalho */
+
 }
 
 
-.tableRow {
-    border-bottom: 1px solid #ddd;
-}
+/* .tableRow {
+    border-bottom: 1px solid #ddd;  
+} */
 
 .tableBody td {
     padding: 0.75rem;
@@ -255,10 +257,9 @@
     font-weight: bold;
     text-align: left;
     white-space: nowrap;
-    position: relative; /* Importante para que a borda e a sombra sejam aplicadas corretamente */
-    
-    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidade */
-    z-index: 10;
+    /* Importante para que a borda e a sombra sejam aplicadas corretamente */
+    /* Sombra para dar profundidade */
+
 }
 
 .id, .ano, .situacao {
@@ -278,7 +279,7 @@
 }
 
 .tableBody tr:hover {
-    background-color: #e2e2e2;
+    background-color: #c8c8c8;
     
 }
 
@@ -287,7 +288,4 @@
     border-bottom: 1px solid #ddd;
 }
 
-.tableBody tr:nth-child(even) td {
-    background-color: #f2f2f2;
-}
 

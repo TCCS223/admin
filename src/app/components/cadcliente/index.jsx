@@ -20,8 +20,6 @@ export default function CadCliente() {
         setIsModalOpen(false); // Altera o estado 'isModalOpen' para 'false', o que pode ser usado para fechar um modal.
     };
     
-
-
     const handleselectSexo = () => {
         const sexo = selectSexo.current.value;
         console.log(sexo)

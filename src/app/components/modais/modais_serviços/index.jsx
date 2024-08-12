@@ -1,6 +1,6 @@
-import styles from './index.module.css'
+import styles from './index.module.css';
 
-export default function ConsultaVeiculo({ isOpen, onClose }) {
+export default function ConsultaCliente({ isOpen, onClose }) {
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains(styles.teste)) {
             onClose();
@@ -26,15 +26,15 @@ export default function ConsultaVeiculo({ isOpen, onClose }) {
                                 </label>
                                 <label className={styles.radioLabel}>
                                     <input type="radio" name="search" className={styles.radioInput} />
-                                    <span className={styles.radioCustom}></span> Placa
+                                    <span className={styles.radioCustom}></span> Nome
                                 </label>
                                 <label className={styles.radioLabel}>
                                     <input type="radio" name="search" className={styles.radioInput} />
-                                    <span className={styles.radioCustom}></span> Modelo
+                                    <span className={styles.radioCustom}></span> CPF
                                 </label>
                                 <label className={styles.radioLabel}>
                                     <input type="radio" name="search" className={styles.radioInput} />
-                                    <span className={styles.radioCustom}></span> Cor
+                                    <span className={styles.radioCustom}></span> Telefone
                                 </label>
                             </div>
                         </div>
@@ -69,124 +69,123 @@ export default function ConsultaVeiculo({ isOpen, onClose }) {
                         <table className={styles.resultTable}>
                             <thead className={styles.tableHead}>
                                     <th className={`${styles.tableHeader} ${styles.id}`}>Código</th>
-                                    <th className={`${styles.tableHeader} ${styles.modelo}`}>Modelo</th>
-                                    <th className={`${styles.tableHeader} ${styles.placa}`}>Placa</th>
-                                    <th className={`${styles.tableHeader} ${styles.ano}`}>Ano</th>
-                                    <th className={`${styles.tableHeader} ${styles.cor}`}>Cor</th>
-                                    <th className={`${styles.tableHeader} ${styles.combustivel}`}>Combustível</th>
-                                    <th className={`${styles.tableHeader} ${styles.proprietario}`}>CPF Proprietário</th> {/* Nova coluna */}
+                                    <th className={`${styles.tableHeader} ${styles.nome}`}>Nome</th>
+                                    <th className={`${styles.tableHeader} ${styles.cpf}`}>CPF</th>
+                                    <th className={`${styles.tableHeader} ${styles.dataNasc}`}>Data de Nascimento</th>
+                                    <th className={`${styles.tableHeader} ${styles.sexo}`}>Sexo</th>
+                                    <th className={`${styles.tableHeader} ${styles.telefone}`}>Telefone</th>
+                                    <th className={`${styles.tableHeader} ${styles.email}`}>Email</th>
                                     <th className={`${styles.tableHeader} ${styles.observ}`}>Observações</th>
+                                    <th className={`${styles.tableHeader} ${styles.acesso}`}>Acesso</th>
                                     <th className={`${styles.tableHeader} ${styles.situacao}`}>Situação</th>
                             </thead>
                             <tbody className={styles.tableBody}>
-                                <tr>
+                            <tr>
                                     <td>001</td>
-                                    <td>Fiat Uno</td>
-                                    <td>ABC-1234</td>
-                                    <td>2020</td>
-                                    <td>Prata</td>
-                                    <td>Gasolina</td>
+                                    <td>João Silva</td>
                                     <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
                                     <td>Nenhuma</td>
+                                    <td>Admin</td>
                                     <td>Ativo</td>
                                 </tr>
                                 <tr>
                                     <td>002</td>
-                                    <td>Volkswagen Gol</td>
-                                    <td>XYZ-5678</td>
-                                    <td>2018</td>
-                                    <td>Preto</td>
-                                    <td>Flex</td>
+                                    <td>Maria Oliveira</td>
                                     <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
                                     <td>Nenhuma</td>
-                                    <td>Inativo</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
                                 </tr>
                                 <tr>
                                     <td>003</td>
-                                    <td>Chevrolet Onix</td>
-                                    <td>KLM-9101</td>
-                                    <td>2022</td>
-                                    <td>Branco</td>
-                                    <td>Álcool</td>
-                                    <td>321.654.987-00</td>
-                                    <td>Nenhuma</td>
-                                    <td>Ativo</td>
-                                </tr>
-                                <tr>
-                                    <td>004</td>
-                                    <td>Honda Civic</td>
-                                    <td>QRS-1122</td>
-                                    <td>2017</td>
-                                    <td>Azul</td>
-                                    <td>Gasolina</td>
-                                    <td>456.789.123-00</td>
-                                    <td>Completamente revisado</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
                                     <td>Inativo</td>
                                 </tr>
                                 <tr>
-                                    <td>005</td>
-                                    <td>Renault Sandero</td>
-                                    <td>TUV-3344</td>
-                                    <td>2019</td>
-                                    <td>Vermelho</td>
-                                    <td>Flex</td>
-                                    <td>654.321.987-00</td>
-                                    <td>Leve arranhão na lateral</td>
-                                    <td>Ativo</td>
-                                </tr>
-                                <tr>
-                                    <td>006</td>
-                                    <td>Ford Ka</td>
-                                    <td>WXY-5566</td>
-                                    <td>2021</td>
-                                    <td>Prata</td>
-                                    <td>Gasolina</td>
-                                    <td>789.123.456-00</td>
-                                    <td>Troca de óleo recente</td>
-                                    <td>Ativo</td>
-                                </tr>
-                                <tr>
-                                    <td>007</td>
-                                    <td>Hyundai HB20</td>
-                                    <td>ZAB-7788</td>
-                                    <td>2020</td>
-                                    <td>Cinza</td>
-                                    <td>Flex</td>
-                                    <td>213.546.879-00</td>
+                                    <td>001</td>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
                                     <td>Nenhuma</td>
+                                    <td>Admin</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Maria Oliveira</td>
+                                    <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
                                     <td>Inativo</td>
                                 </tr>
                                 <tr>
-                                    <td>008</td>
-                                    <td>Jeep Renegade</td>
-                                    <td>CDE-9900</td>
-                                    <td>2023</td>
-                                    <td>Verde</td>
-                                    <td>Diesel</td>
-                                    <td>987.213.546-00</td>
-                                    <td>Novo, 0 km</td>
-                                    <td>Ativo</td>
-                                </tr>
-                                <tr>
-                                    <td>009</td>
-                                    <td>Fiat Toro</td>
-                                    <td>FGH-1123</td>
-                                    <td>2021</td>
-                                    <td>Branco</td>
-                                    <td>Flex</td>
-                                    <td>654.987.321-00</td>
+                                    <td>001</td>
+                                    <td>João Silva</td>
+                                    <td>123.456.789-00</td>
+                                    <td>01/01/1980</td>
+                                    <td>M</td>
+                                    <td>(11) 91234-5678</td>
+                                    <td>joao.silva@email.com</td>
                                     <td>Nenhuma</td>
+                                    <td>Admin</td>
                                     <td>Ativo</td>
                                 </tr>
                                 <tr>
-                                    <td>010</td>
-                                    <td>Volkswagen T-Cross</td>
-                                    <td>JKL-4455</td>
-                                    <td>2019</td>
-                                    <td>Preto</td>
-                                    <td>Gasolina</td>
-                                    <td>789.321.654-00</td>
-                                    <td>Primeiro dono</td>
+                                    <td>002</td>
+                                    <td>Maria Oliveira</td>
+                                    <td>987.654.321-00</td>
+                                    <td>10/02/1985</td>
+                                    <td>F</td>
+                                    <td>(11) 97654-3210</td>
+                                    <td>maria.oliveira@email.com</td>
+                                    <td>Nenhuma</td>
+                                    <td>Usuário</td>
+                                    <td>Ativo</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Carlos Souza</td>
+                                    <td>111.222.333-44</td>
+                                    <td>15/05/1990</td>
+                                    <td>M</td>
+                                    <td>(11) 93456-7890</td>
+                                    <td>carlos.souza@email.com</td>
+                                    <td>Contato frequente</td>
+                                    <td>Usuário</td>
                                     <td>Inativo</td>
                                 </tr>
                             </tbody>
