@@ -220,7 +220,7 @@
 }
 
 .resultTable {
-    min-width: 120rem; 
+    min-width: 110rem; 
     border-collapse: collapse;
     text-align: left;
     color: #222;
@@ -247,15 +247,20 @@
     z-index: 10; 
 }
 
-.id, .acesso, .situacao, .sexo {
+.id, .duracao, .situacao {
     width: 5rem;
 }
 
-.nome, .email, .observ {
-    width: 12em;
+.nome{
+    width: 8em;
 }
 
-.cpf, .dataNasc, .telefone {
+.descricao {
+    width: 17em;
+
+}
+
+.preco, .categoria {
     width: 7rem;
 }
 

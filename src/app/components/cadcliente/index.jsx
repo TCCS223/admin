@@ -41,14 +41,15 @@ export default function CadCliente() {
             backdrop: "rgba(0,0,0,0.7)",
 
         }).then((result) => {
-            // if (result.isConfirmed) {
-            //     Swal.fire({
-            //         title: "Deleted!",
-            //         text: "Your file has been deleted.",
-            //         icon: "success",
-            //         confirmButtonColor: "rgb(40, 167, 69)",
-            //     });
-            // }
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success",
+                    iconColor: "rgb(40, 167, 69)",
+                    confirmButtonColor: "rgb(40, 167, 69)",
+                });
+            }
         });
     }
 

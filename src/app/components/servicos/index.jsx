@@ -2,7 +2,7 @@
 
 import styles from './index.module.css';
 import { useState } from 'react';
-import ConsultaVeiculo from '../modais/modais_clientes';
+import ConsultaServico from '../modais/modais_serviços';
 
 
 export default function Servicos() {
@@ -27,7 +27,7 @@ export default function Servicos() {
                 <button id="localizarCliente" onClick={openModal}>Localizar</button>
             </div>
             
-            <ConsultaVeiculo isOpen={isModalOpen} onClose={closeModal} />  
+            <ConsultaServico isOpen={isModalOpen} onClose={closeModal} />  
 
             <form id="servicoForm" className={styles.form}>
 
