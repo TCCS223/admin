@@ -4,7 +4,7 @@ import styles from './index.module.css';
 import Swal from 'sweetalert2';
 import { useState } from 'react';
 import React, { useRef } from "react";
- import ModalConsulta from '../modais/modais_clientes/modal_localizar';
+ import ConsultaCliente from '../modais/modais_clientes';
 
 export default function CadCliente() {
 
@@ -64,7 +64,7 @@ export default function CadCliente() {
                 <button id="localizarCliente" onClick={openModal}>Localizar</button>
             </div>
 
-            <ModalConsulta isOpen={isModalOpen} onClose={closeModal} />    
+            <ConsultaCliente isOpen={isModalOpen} onClose={closeModal} />    
 
             <form id="clienteForm" className={styles.form}>
 

@@ -8,7 +8,7 @@ import CadCliente from "./components/cadcliente";
 import Veiculos from "./components/veiculos";
 import Servicos from "./components/servicos";
 import FullCalendar from "./components/agenda/index";
-import Localizar2 from "./components/modais/modais_clientes/modal_localizar";
+// import Localizar2 from "./components/modais/modais_clientes/modal_localizar";
 // import img from '../../public/logo.png'
 
 

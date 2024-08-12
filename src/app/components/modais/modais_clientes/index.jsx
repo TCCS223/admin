@@ -1,6 +1,6 @@
-import styles from '../modal_localizar/index.module.css';
+import styles from './index.module.css';
 
-export default function ModalConsulta({ isOpen, onClose }) {
+export default function ConsultaCliente({ isOpen, onClose }) {
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains(styles.teste)) {
             onClose();
