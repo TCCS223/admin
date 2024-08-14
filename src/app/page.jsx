@@ -83,7 +83,7 @@ export default function Home() {
                 }
             </div>
 
-            <div className={styles.logo}>
+            {/* <div className={styles.logo}>
             <Image
               src={'logo.png'}
               width={190}
@@ -91,7 +91,7 @@ export default function Home() {
               alt={"logo"}
               unoptimized={true}
             />
-            </div>
+            </div> */}
 
         </div>
     )
